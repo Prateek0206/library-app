@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+:root {
+  --base: #141825;
+  --content: #fff;
+  --text-hover: #8b949e;
+  --accent: #a8c7fa;
+  --secondary-accent: #565979;
+  --on-base: #2a2b40;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  src: url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap),
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+    "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  src: url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap),
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  src: url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap),
+    format("woff2");
+}
+body {
+  background-color: var(--base);
+  color: var(--content);
+  font-family: "Roboto Flex", sans-serif;
+}
+
+h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(0.6rem, 3vw, 4rem);
+}
+h3 {
+  font-size: clamp(0.4rem, 2vw, 3rem);
+}
+
+p {
+  font-size: clamp(0.1rem, 1.2vw, 2.6rem);
+}
+
+svg {
+  fill: var(--content);
+}
+
+a:link,
+a:visited {
+  color: var(--content);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-hover);
+}
+
+.content-width {
+  width: 100vw;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > div > *:hover {
+  cursor: pointer;
+  color: var(--text-hover);
+  fill: var(--text-hover);
+}
+#left-nav {
+  width: 60%;
+}
+
+#right-nav {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#catagories {
+  width: 100%;
+  height: 70vh;
+  max-height: 50rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 1rem 3rem;
+  justify-items: center;
+  align-items: center;
+  column-gap: 4rem;
+  position: relative;
+}
+
+.catagory-card {
+  padding: 2rem;
+  background-color: var(--on-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  height: 18rem;
+  cursor: pointer;
+}
+
+.catagory-card:hover {
+  outline: 2px solid var(--accent);
+}
+
+.catagory-card > img {
+  width: 40%;
+}
+.metadata {
+  line-height: 1.5;
+  text-align: center;
+}
+.metadata > h3 {
+  font-weight: 700;
+  font-size: large;
+}
+.metadata > p {
+  color: var(--secondary-accent);
+  font-size: smaller;
+  text-align: start;
+}
+
+#catagories > button {
+  background-color: var(--accent);
+  border: none;
+  color: var(--base);
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.6rem;
+  position: absolute;
+  bottom: 0;
+  font-weight: 400;
+}
+
+button > a:link,
+button > a:visited {
+  color: var(--base);
+}
+.interactive-button {
+  background-color: var(--accent);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.6rem;
+  transition: 0.2s transform ease-in-out;
+}
+
+.interactive-button:hover {
+  transform: scale(1.1);
+}
