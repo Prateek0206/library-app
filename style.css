@@ -78,6 +78,7 @@ a:hover {
   max-width: 120rem;
   margin: 0 auto;
   padding: 1rem;
+
 }
 
 nav {
@@ -96,7 +97,7 @@ nav > div > *:hover {
   fill: var(--text-hover);
 }
 #left-nav {
-  width: 60%;
+  width: fit-content;
 }
 
 #right-nav {
@@ -178,5 +179,10 @@ button > a:visited {
 }
 
 .interactive-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+
+.book-detail{
+  background-color: var(--on-base);
 }
