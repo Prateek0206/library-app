@@ -78,7 +78,6 @@ a:hover {
   max-width: 120rem;
   margin: 0 auto;
   padding: 1rem;
-
 }
 
 nav {
@@ -180,9 +179,45 @@ button > a:visited {
 
 .interactive-button:hover {
   transform: scale(1.05);
+  color: var(--base);
+}
+
+.book-detail {
+  background-color: var(--on-base);
 }
 
 
-.book-detail{
+fieldset{
   background-color: var(--on-base);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+fieldset > div > div {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+fieldset > div > div > input {
+  background-color: var(--base);
+  border: none;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  color: var(--content);
+}
+
+fieldset > div > div > input::placeholder {
+  color: var(--text-hover);
+  font-size: small;
+}
+
+.post-button{
+  background-color: var(--accent);
+  border: none;
+  color: var(--base);
+  width: 10%;
+  margin: 2rem 0 0 1.4rem;
+  border-radius: .4rem;
+  padding: .6rem;
+  cursor: pointer;
 }

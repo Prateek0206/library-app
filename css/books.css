@@ -2,23 +2,26 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  justify-items: center;
+  align-items: center;
   row-gap: 3rem;
   padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
 }
 
 .book-detail {
-
   width: clamp(4rem, 15vw, 20rem);
   height: clamp(10rem, calc(50vh + 3rem), 40rem);
   cursor: pointer;
-  transition: .2s all ease-in-out;
-  border-radius: .4rem;
+  transition: 0.2s all ease-in-out;
+  border-radius: 0.4rem;
 }
 
-.book-detail:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.368), 0 0 10px rgba(0, 0, 0, 0.507), 0 0 16px rgba(0, 0, 0, 0.577);
+.book-detail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.368), 0 0 10px rgba(0, 0, 0, 0.507),
+    0 0 16px rgba(0, 0, 0, 0.577);
 }
 
 .metadata {
@@ -47,4 +50,11 @@ img {
   height: 50%;
   object-fit: cover;
   object-position: center;
+}
+
+#delete-all {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  cursor: pointer;
 }
