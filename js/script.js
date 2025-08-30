@@ -1,18 +1,18 @@
 document.querySelectorAll(".catagory-card").forEach((card) => {
   card.addEventListener("click", () => {
-    window.location.href = "../books.html";
+    window.location.href = "/library-app/books.html";
   });
 });
 
 document.querySelector(".logo").addEventListener("click", () => {
-  window.location.href = "../index.html";
+  window.location.href = "/library-app/index.html";
 });
 
 const interactiveButton = document.querySelector(".interactive-button");
 
 if (interactiveButton) {
   interactiveButton.addEventListener("click", () => {
-    window.location.href = "../add-books.html";
+    window.location.href = "/library-app/add-books.html";
   });
 }
 
