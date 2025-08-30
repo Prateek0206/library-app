@@ -16,10 +16,7 @@ export function displayBooks(newCard) {
   card.classList.add("book-detail");
 
   let image = document.createElement("img");
-  image.setAttribute(
-    "src",
-    `https://picsum.photos/seed/${newCard.id}/200/300`
-  );
+  image.setAttribute("src", `https://picsum.photos/seed/${newCard.id}/200/300`);
 
   let bookName = document.createElement("h2");
   bookName.textContent = newCard.name;
@@ -33,11 +30,25 @@ export function displayBooks(newCard) {
   let desc = document.createElement("p");
   desc.textContent = newCard.desc;
 
+  let readStausIndicator = document.createElement("span");
+  readStausIndicator.classList.add("status");
+  if (newCard.readStatus) {
+    card.classList.add("read");
+    readStausIndicator.setAttribute("data-status", "read");
+    readStausIndicator.textContent = "read";
+  } else {
+    card.classList.add("unread");
+    readStausIndicator.setAttribute("data-status", "unread");
+    readStausIndicator.textContent = "unread";
+  }
+
   let metaData = document.createElement("div");
   metaData.classList.add("metadata");
-  metaData.append(bookName, author, pages, desc);
+  metaData.append(bookName, author, pages, desc, readStausIndicator);
 
   card.append(image, metaData);
+  console.log(newCard.readStatus);
+
   console.log(card.innerHTML);
 
   bookGrid.appendChild(card);
@@ -77,6 +88,6 @@ export function displayBooks(newCard) {
   }); */
 document.addEventListener("DOMContentLoaded", () => {
   myLibrary.forEach((book) => {
-    displayBooks(book)
+    displayBooks(book);
   });
 });

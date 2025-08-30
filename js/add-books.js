@@ -31,9 +31,12 @@ function addBooks() {
   let authorName = document.getElementById("author").value;
   let desc = document.getElementById("desc").value;
   let pages = document.getElementById("pages").value;
+  let readStatus = document.getElementById("read-status").checked
+    ? true
+    : false;
 
-  let newBook = new Book(bookName, authorName, desc, pages);
-  window.location.href='../books.html'
+  let newBook = new Book(bookName, authorName, desc, pages, readStatus);
+  window.location.href = "../books.html";
   console.log(newBook);
 }
 

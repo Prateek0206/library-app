@@ -3,7 +3,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  align-items: center;
   row-gap: 3rem;
   padding: 2rem;
   margin: 2rem 0;
@@ -16,6 +15,12 @@
   cursor: pointer;
   transition: 0.2s all ease-in-out;
   border-radius: 0.4rem;
+  height: fit-content;
+  min-height: 100%;
+}
+
+.book-detail>img{
+  max-height: 10rem;
 }
 
 .book-detail:hover {
@@ -58,3 +63,7 @@ img {
   right: 1rem;
   cursor: pointer;
 }
+
+
+
+
